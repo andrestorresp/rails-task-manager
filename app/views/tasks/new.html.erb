@@ -1,0 +1,18 @@
+<%= form_with model: @task do |form| %>
+    <div>
+      <%= form.label :title %>
+      <%= form.text_field :title %>
+    </div>
+    <div>
+      <%= form.label :details %>
+      <%= form.text_area :details %>
+    </div>
+    <div>
+      <%= form.label :completed %>
+      <%= form.check_box :completed %>
+    </div>
+    <div>
+      <%= form.submit "Create Task" %>
+    </div>
+  <% end %>
+  <%= link_to 'Back', tasks_path %>
